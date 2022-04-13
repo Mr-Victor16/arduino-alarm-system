@@ -9,7 +9,7 @@ Przy tworzeniu użyto symulatora Tinkercad.
 
 ## Widok układu
 
-![Circuit](https://github.com/Mr-Victor16/arduino-alarm-system/blob/screenshots/circuit.png?raw=true)
+![Circuit](https://github.com/Mr-Victor16/arduino-alarm-system/blob/main/circuit.png?raw=true)
 
 Zrzut ekranu układu stworzonego w symulatorze Tinkercad.
 
