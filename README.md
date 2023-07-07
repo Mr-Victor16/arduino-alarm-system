@@ -1,18 +1,13 @@
-# Android alarm system
+# Arduino alarm system
 
 Prosty system alarmowy, stworzony na potrzeby projektu indywidualnego z zajęć z Systemów Wbudowanych.
 Przy tworzeniu użyto symulatora Tinkercad.
-
-
-
-
 
 ## Widok układu
 
 ![Circuit](https://github.com/Mr-Victor16/arduino-alarm-system/blob/main/circuit.png?raw=true)
 
 Zrzut ekranu układu stworzonego w symulatorze Tinkercad.
-
 
 ## Użyte komponenty
 - Arduino Uno R3
