@@ -1,51 +1,44 @@
 # Arduino alarm system
+Simple alarm system developed as part of an individual project for the Embedded Systems course. System was designed and tested using the Tinkercad simulator.
 
-Prosty system alarmowy, stworzony na potrzeby projektu indywidualnego z zajęć z Systemów Wbudowanych.
-Przy tworzeniu użyto symulatora Tinkercad.
-
-## Widok układu
-
+## Sample system layout
 ![Circuit](https://github.com/Mr-Victor16/arduino-alarm-system/blob/main/circuit.png?raw=true)
 
-Zrzut ekranu układu stworzonego w symulatorze Tinkercad.
+Above image represents an example layout of the alarm system, created in the Tinkercad simulator. It showcases the arrangement and wiring of the components used in the project.
 
-## Użyte komponenty
-- Arduino Uno R3
-- Klawiatura 4x4
-- Wyświelacz LCD
-- Potencjometr
-- Rezystor
-- Pasek LED
-- Piezo
-- Czujnik PIR
-- Przełącznik suwakowy
-- Czujnik przechyłu
+## Components used
+- Arduino Uno R3,
+- 4x4 Keypad,
+- LCD Display,
+- Potentiometer,
+- Resistor,
+- LED Strip,
+- Piezo Buzzer,
+- PIR Sensor,
+- Slide Switch,
+- Tilt Sensor.
 
-## Możliwości systemu
-
-- Uzbrajanie / rozbrajanie alarmu za pomocą kodu PIN (2 rodzaje: dla użytkownika oraz administratora) wpisywanego na klawiaturze matrycowej
-- Możliwość podłączenia ponad 100 podsystemów oraz wielu czujników dla jednego podsystemu
-- Możliwość zmiany kodu dostępu administratora oraz użytkownika
-- Limit błędnych wprowadzeń kodu dostępu
-- Dane zapisywane są w pamięci EEPROM, zatem w przypadku zaniku zasilania status systemu nie jest tracony
-- Wykrywanie utraty komunikacji z podsystemem, możliwość dodawania podsystemów w trakcie działania
-- Wybór działania za pomocą liter A-D na klawiaturze matrycowej:
-    - A - Uzbrajanie systemu
-    - B - zmiana kodu użytkownika,
-    - C - zmiana kodu administratora
-    - D - przeprowadzenie ponownej konfiguracji
-- Sygnalizowanie statusu alarmu za pomocą wyświetlacza LCD, paska LED oraz piezo (dźwięk)
+## System capabilities
+- Arming/disarming the alarm via a PIN code entered on a matrix keypad (2 types of codes: user and administrator).
+- Support for over 100 subsystems, with multiple sensors configurable for each subsystem.
+- Ability to change both user and administrator access codes.
+- Protection against excessive incorrect code entries.
+- Data stored in EEPROM memory, ensuring system status is preserved during power outages.
+- Detection of communication loss with subsystems, with the ability to add new subsystems while the system is operational.
+- Operation modes selectable via letters A-D on the matrix keypad:
+    - A: Arm the system;
+    - B: Change the user PIN;
+    - C: Change the administrator PIN;
+    - D: Reconfigure the system;
+- Status signaling through an LCD display, an LED strip and a piezo buzzer (sound).
 
 ## FAQ
+#### What are the default PIN codes for users and administrators?
+The default PIN for users is 4321, while for administrators, it is 1234..
 
-#### Jaki jest domyślny PIN użytkownika oraz administratora?
-
-Dla użytkownika są to cyfry - 4321, a dla administratora 1234.
-
-#### Co oznaczają kolory na pasku LED?
-
-- Kolor niebieski - Alarm uzbrojony
-- Kolor zielony na całym pasku - Alarm rozbrojony
-- Kolor żółty na pojedyńczej diodzie - Brak połączenia z danym podsystemem.
-- Kolor czerwony na pojedyńczej diodzie - Oznacza wykrycie ruchu na danym podsystemie. 
-- Kolor czerwony na całym pasku LED - Uruchomienie alarmu po wykryciu ruchu.
+#### What do the LED strip colors indicate?
+- Blue (entire strip): The alarm is armed.
+- Green (entire strip): The alarm is disarmed.
+- Yellow (single LED): No connection to the corresponding subsystem.
+- Red (single LED): Motion detected in the corresponding subsystem. 
+- Red (entire strip): Alarm triggered due to motion detection.
